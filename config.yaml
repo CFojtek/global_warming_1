@@ -1,0 +1,20 @@
+data_folder: ./data/
+plot_folder: ./plots/
+temperature_data: temperatures.csv
+coordinate_data: coordinates.csv
+coast_data: ne_10m_coastline/ne_10m_coastline.shp
+ 
+# Bounds: [[min_lat, min_lon], [max_lat, max_lon]]
+bounds:
+  - [40, -10]
+  - [50, 90]
+ 
+dist_coastal: 50   # 0-50 km is coastal region
+dist_inland: 500   # >500 km is inland region
+
+trend_year_start: 1950 # Year to start calculating trend
+trend_year_end: 2017 # Year to end calulating trend
+trend_data_fraction: 0.5 # Fraction of data points required to calculate trend (0-1)
+
+clean_temperature_data: false # Whether to clean temperature data. Has to be done only once
+calculate_coordinates: false # Whether to calculate coordinates. Has to be done only once
